@@ -1,0 +1,350 @@
+
+H4PE33	S26Q33 AVOID CONFRONTING PROBLEMS-W4
+
+			Freq.	Percent	Valid	Cum.
+Valid	1	Strongly agree	151	2.95	2.95	2.95
+	2	Agree	814	15.92	15.92	18.88
+	3	Neither agree nor disagree	1040	20.34	20.34	39.22
+	4	Disagree	2636	51.55	51.56	90.79
+	5	Strongly disagree	458	8.96	8.96	99.75
+	6	Refused	5	0.10	0.10	99.84
+	8	Don't know	8	0.16	0.16	100.00
+	Total		5112	99.98	100.00	
+Missing	.		1	0.02		
+Total			5113	100.00		
+
+
+
+H4PE34	S26Q34 RELY ON GUT FEELINGS DECISIONS-W4
+
+			Freq.	Percent	Valid	Cum.
+Valid	1	Strongly agree	206	4.03	4.03	4.03
+	2	Agree	945	18.48	18.49	22.52
+	3	Neither agree nor disagree	890	17.41	17.41	39.93
+	4	Disagree	2486	48.62	48.63	88.56
+	5	Strongly disagree	570	11.15	11.15	99.71
+	6	Refused	7	0.14	0.14	99.84
+	8	Don't know	8	0.16	0.16	100.00
+	Total		5112	99.98	100.00	
+Missing	.		1	0.02		
+Total			5113	100.00		
+
+
+
+H4PE35	S26Q35 LIKE TO TAKE RISKS-W4
+
+			Freq.	Percent	Valid	Cum.
+Valid	1	Strongly agree	238	4.65	4.66	4.66
+	2	Agree	1571	30.73	30.73	35.39
+	3	Neither agree nor disagree	1394	27.26	27.27	62.66
+	4	Disagree	1655	32.37	32.37	95.03
+	5	Strongly disagree	243	4.75	4.75	99.78
+	6	Refused	5	0.10	0.10	99.88
+	8	Don't know	6	0.12	0.12	100.00
+	Total		5112	99.98	100.00	
+Missing	.		1	0.02		
+Total			5113	100.00		
+
+
+
+H4PE36	S26Q36 LIVE W/O THOUGHT FOR FUTURE-W4
+
+			Freq.	Percent	Valid	Cum.
+Valid	1	Strongly agree	51	1.00	1.00	1.00
+	2	Agree	311	6.08	6.08	7.08
+	3	Neither agree nor disagree	473	9.25	9.25	16.33
+	4	Disagree	3130	61.22	61.23	77.56
+	5	Strongly disagree	1135	22.20	22.20	99.77
+	6	Refused	5	0.10	0.10	99.86
+	8	Don't know	7	0.14	0.14	100.00
+	Total		5112	99.98	100.00	
+Missing	.		1	0.02		
+Total			5113	100.00		
+
+
+
+H4PE40	S26Q40 LOW CONTRL EVENTS HAPPEN TO ME-W4
+
+			Freq.	Percent	Valid	Cum.
+Valid	1	Strongly agree	44	0.86	0.86	0.86
+	2	Agree	271	5.30	5.30	6.16
+	3	Neither agree nor disagree	639	12.50	12.50	18.66
+	4	Disagree	3196	62.51	62.52	81.18
+	5	Strongly disagree	945	18.48	18.49	99.67
+	6	Refused	7	0.14	0.14	99.80
+	8	Don't know	10	0.20	0.20	100.00
+	Total		5112	99.98	100.00	
+Missing	.		1	0.02		
+Total			5113	100.00		
+
+
+
+H1GH39	S3Q39 WEAR HELMET WHILE CYCLING-W1
+
+			Freq.	Percent	Valid	Cum.
+Valid	0	Never	3010	58.87	58.87	58.87
+	1	Rarely	189	3.70	3.70	62.57
+	2	Sometimes	146	2.86	2.86	65.42
+	3	Most of the time	132	2.58	2.58	68.00
+	4	Always	168	3.29	3.29	71.29
+	5	Never rides a bicycle	1463	28.61	28.61	99.90
+	6	Refused	2	0.04	0.04	99.94
+	8	Don't know	3	0.06	0.06	100.00
+	Total		5113	100.00	100.00	
+
+
+
+H1GH40	S3Q40 FREQ-RIDE A MOTORCYCLE-W1
+
+			Freq.	Percent	Valid	Cum.
+Valid	0	Never (skip to Q.42)	4063	79.46	79.46	79.46
+	1	Once or twice	615	12.03	12.03	91.49
+	2	About once a month	178	3.48	3.48	94.97
+	3	About once a week	129	2.52	2.52	97.50
+	4	Almost every day	123	2.41	2.41	99.90
+	6	Refused	2	0.04	0.04	99.94
+	8	Don't know	3	0.06	0.06	100.00
+	Total		5113	100.00	100.00	
+
+
+
+H1GH41	S3Q41 FREQ-WEAR MOTORCYCLE HELMET-W1
+
+			Freq.	Percent	Valid	Cum.
+Valid	0	Never	327	6.40	6.40	6.40
+	1	Rarely	65	1.27	1.27	7.67
+	2	Sometimes	55	1.08	1.08	8.74
+	3	Most of the time	63	1.23	1.23	9.97
+	4	Always	535	10.46	10.46	20.44
+	6	Refused	2	0.04	0.04	20.48
+	7	Legitimate skip	4063	79.46	79.46	99.94
+	8	Don't know	3	0.06	0.06	100.00
+	Total		5113	100.00	100.00	
+
+
+
+H1GH42	S3Q42 FREQ-WEAR SEAT BELT IN CAR-W1
+
+			Freq.	Percent	Valid	Cum.
+Valid	0	Never	236	4.62	4.62	4.62
+	1	Rarely	399	7.80	7.80	12.42
+	2	Sometimes	712	13.93	13.93	26.34
+	3	Most of the time	1097	21.46	21.46	47.80
+	4	Always	2664	52.10	52.10	99.90
+	6	Refused	2	0.04	0.04	99.94
+	8	Don't know	3	0.06	0.06	100.00
+	Total		5113	100.00	100.00	
+
+
+
+H1GH43	S3Q43 FREQ-DRINK ALCOHOL AND DRIVE-W1
+
+			Freq.	Percent	Valid	Cum.
+Valid	0	Never	4929	96.40	96.40	96.40
+	1	1 time	90	1.76	1.76	98.16
+	2	2 or 3 times	57	1.11	1.11	99.28
+	3	4 or 5 times	13	0.25	0.25	99.53
+	4	6 or more times	16	0.31	0.31	99.84
+	6	Refused	4	0.08	0.08	99.92
+	8	Don't know	3	0.06	0.06	99.98
+	9	Not applicable	1	0.02	0.02	100.00
+	Total		5113	100.00	100.00	
+
+
+
+H1GH44	S3Q44 CHANCES OF GETTING AIDS-W1
+
+			Freq.	Percent	Valid	Cum.
+Valid	1	Very high	79	1.55	1.55	1.55
+	2	High	177	3.46	3.46	5.01
+	3	Low	834	16.31	16.31	21.32
+	4	Very low	1581	30.92	30.92	52.24
+	5	None	2412	47.17	47.17	99.41
+	6	Refused	7	0.14	0.14	99.55
+	8	Don't know	23	0.45	0.45	100.00
+	Total		5113	100.00	100.00	
+
+
+
+H1GH46	S3Q46 CHANGES OF GETTING OTHER STDS-W1
+
+			Freq.	Percent	Valid	Cum.
+Valid	1	Very high	55	1.08	1.08	1.08
+	2	High	156	3.05	3.05	4.13
+	3	Low	661	12.93	12.93	17.05
+	4	Very low	1441	28.18	28.18	45.24
+	5	No chance	2758	53.94	53.94	99.18
+	6	Refused	16	0.31	0.31	99.49
+	8	Don't know	25	0.49	0.49	99.98
+	9	Not applicable	1	0.02	0.02	100.00
+	Total		5113	100.00	100.00	
+
+
+
+H4PE33	S26Q33 AVOID CONFRONTING PROBLEMS-W4
+
+			Freq.	Percent	Valid	Cum.
+Valid	1	Strongly agree	44	4.06	4.07	4.07
+	2	Agree	231	21.33	21.35	25.42
+	3	Neither agree nor disagree	256	23.64	23.66	49.08
+	4	Disagree	466	43.03	43.07	92.14
+	5	Strongly disagree	83	7.66	7.67	99.82
+	8	Don't know	2	0.18	0.18	100.00
+	Total		1082	99.91	100.00	
+Missing	.		1	0.09		
+Total			1083	100.00		
+
+
+
+H4PE34	S26Q34 RELY ON GUT FEELINGS DECISIONS-W4
+
+			Freq.	Percent	Valid	Cum.
+Valid	1	Strongly agree	65	6.00	6.01	6.01
+	2	Agree	278	25.67	25.69	31.70
+	3	Neither agree nor disagree	213	19.67	19.69	51.39
+	4	Disagree	450	41.55	41.59	92.98
+	5	Strongly disagree	74	6.83	6.84	99.82
+	8	Don't know	2	0.18	0.18	100.00
+	Total		1082	99.91	100.00	
+Missing	.		1	0.09		
+Total			1083	100.00		
+
+
+
+H4PE35	S26Q35 LIKE TO TAKE RISKS-W4
+
+			Freq.	Percent	Valid	Cum.
+Valid	1	Strongly agree	70	6.46	6.47	6.47
+	2	Agree	402	37.12	37.15	43.62
+	3	Neither agree nor disagree	276	25.48	25.51	69.13
+	4	Disagree	293	27.05	27.08	96.21
+	5	Strongly disagree	39	3.60	3.60	99.82
+	8	Don't know	2	0.18	0.18	100.00
+	Total		1082	99.91	100.00	
+Missing	.		1	0.09		
+Total			1083	100.00		
+
+
+
+H4PE36	S26Q36 LIVE W/O THOUGHT FOR FUTURE-W4
+
+			Freq.	Percent	Valid	Cum.
+Valid	1	Strongly agree	13	1.20	1.20	1.20
+	2	Agree	115	10.62	10.63	11.83
+	3	Neither agree nor disagree	148	13.67	13.68	25.51
+	4	Disagree	639	59.00	59.06	84.57
+	5	Strongly disagree	164	15.14	15.16	99.72
+	8	Don't know	3	0.28	0.28	100.00
+	Total		1082	99.91	100.00	
+Missing	.		1	0.09		
+Total			1083	100.00		
+
+
+
+H4PE40	S26Q40 LOW CONTRL EVENTS HAPPEN TO ME-W4
+
+			Freq.	Percent	Valid	Cum.
+Valid	1	Strongly agree	12	1.11	1.11	1.11
+	2	Agree	80	7.39	7.39	8.50
+	3	Neither agree nor disagree	159	14.68	14.70	23.20
+	4	Disagree	667	61.59	61.65	84.84
+	5	Strongly disagree	163	15.05	15.06	99.91
+	8	Don't know	1	0.09	0.09	100.00
+	Total		1082	99.91	100.00	
+Missing	.		1	0.09		
+Total			1083	100.00		
+
+
+
+H1GH39	S3Q39 WEAR HELMET WHILE CYCLING-W1
+
+			Freq.	Percent	Valid	Cum.
+Valid	0	Never	704	65.00	65.00	65.00
+	1	Rarely	35	3.23	3.23	68.24
+	2	Sometimes	32	2.95	2.95	71.19
+	3	Most of the time	16	1.48	1.48	72.67
+	4	Always	19	1.75	1.75	74.42
+	5	Never rides a bicycle	276	25.48	25.48	99.91
+	8	Don't know	1	0.09	0.09	100.00
+	Total		1083	100.00	100.00	
+
+
+
+H1GH40	S3Q40 FREQ-RIDE A MOTORCYCLE-W1
+
+			Freq.	Percent	Valid	Cum.
+Valid	0	Never (skip to Q.42)	831	76.73	76.73	76.73
+	1	Once or twice	133	12.28	12.28	89.01
+	2	About once a month	50	4.62	4.62	93.63
+	3	About once a week	32	2.95	2.95	96.58
+	4	Almost every day	36	3.32	3.32	99.91
+	8	Don't know	1	0.09	0.09	100.00
+	Total		1083	100.00	100.00	
+
+
+
+H1GH41	S3Q41 FREQ-WEAR MOTORCYCLE HELMET-W1
+
+			Freq.	Percent	Valid	Cum.
+Valid	0	Never	87	8.03	8.03	8.03
+	1	Rarely	22	2.03	2.03	10.06
+	2	Sometimes	21	1.94	1.94	12.00
+	3	Most of the time	15	1.39	1.39	13.39
+	4	Always	106	9.79	9.79	23.18
+	7	Legitimate skip	831	76.73	76.73	99.91
+	8	Don't know	1	0.09	0.09	100.00
+	Total		1083	100.00	100.00	
+
+
+
+H1GH42	S3Q42 FREQ-WEAR SEAT BELT IN CAR-W1
+
+			Freq.	Percent	Valid	Cum.
+Valid	0	Never	85	7.85	7.85	7.85
+	1	Rarely	119	10.99	10.99	18.84
+	2	Sometimes	165	15.24	15.24	34.07
+	3	Most of the time	240	22.16	22.16	56.23
+	4	Always	473	43.67	43.67	99.91
+	8	Don't know	1	0.09	0.09	100.00
+	Total		1083	100.00	100.00	
+
+
+
+H1GH43	S3Q43 FREQ-DRINK ALCOHOL AND DRIVE-W1
+
+			Freq.	Percent	Valid	Cum.
+Valid	0	Never	1045	96.49	96.49	96.49
+	1	1 time	21	1.94	1.94	98.43
+	2	2 or 3 times	12	1.11	1.11	99.54
+	3	4 or 5 times	2	0.18	0.18	99.72
+	4	6 or more times	2	0.18	0.18	99.91
+	8	Don't know	1	0.09	0.09	100.00
+	Total		1083	100.00	100.00	
+
+
+
+H1GH44	S3Q44 CHANCES OF GETTING AIDS-W1
+
+			Freq.	Percent	Valid	Cum.
+Valid	1	Very high	19	1.75	1.75	1.75
+	2	High	47	4.34	4.34	6.09
+	3	Low	178	16.44	16.44	22.53
+	4	Very low	327	30.19	30.19	52.72
+	5	None	501	46.26	46.26	98.98
+	8	Don't know	11	1.02	1.02	100.00
+	Total		1083	100.00	100.00	
+
+
+
+H1GH46	S3Q46 CHANGES OF GETTING OTHER STDS-W1
+
+			Freq.	Percent	Valid	Cum.
+Valid	1	Very high	13	1.20	1.20	1.20
+	2	High	35	3.23	3.23	4.43
+	3	Low	160	14.77	14.77	19.21
+	4	Very low	317	29.27	29.27	48.48
+	5	No chance	549	50.69	50.69	99.17
+	6	Refused	1	0.09	0.09	99.26
+	8	Don't know	8	0.74	0.74	100.00
+	Total		1083	100.00	100.00	
+

@@ -1,0 +1,101 @@
+H4HS1	S5Q1 BEST DESCRIBE CURR/HEALTH INS-W4					
+						
+		Freq.	Percent	Valid	Cum.	short label
+1	You have no health insurance	1083	21	21.18	21.18	Uninsured
+2	You get insurance through work	2579	50	50.44	71.62	Employer
+3	You get insurance through a union	53	1	1.04	72.66	Union
+4	You get insurance through school	73	1	1.43	74.09	School
+5	You are covered by your husband's or wife's insurance	582	11	11.38	85.47	Spouse
+6	You are covered by your parent's insurance	42	1	0.82	86.29	Parents
+7	You are covered because you are active duty military	72	1	1.41	87.7	Military
+8	You buy private insurance yourself	186	4	3.64	91.34	Individual
+9	You are on Medicaid	383	7	7.49	98.83	Medicaid
+10	You are covered through the Indian Health Service	15	0	0.29	99.12	Indian Health Service
+11/98	You do not know what your health insurance is	45	1	0.88	100	Don't Know
+Total		5113	100	100		
+						
+						
+						
+H4HS2A	S5Q2A WHY NO HEALTH INS-NO OFFER-W4					
+						
+			Freq.	Percent	Valid	Cum.
+Valid	0	No	572	11.19	11.19	11.19
+	1	Yes	509	9.96	9.96	21.14
+	7	Legitimate skip	4030	78.82	78.82	99.96
+	8		2	0.04	0.04	100
+	Total		5113	100	100	
+						
+						
+						
+H4HS2B	S5Q2B WHY NO HLTH INS-TOO EXPENSIVE-W4					
+						
+			Freq.	Percent	Valid	Cum.
+Valid	0	No	277	5.42	5.42	5.42
+	1	Yes	798	15.61	15.61	21.02
+	7	Legitimate skip	4030	78.82	78.82	99.84
+	8	Don't know	8	0.16	0.16	100
+	Total		5113	100	100	
+						
+						
+						
+H4HS2C	S5Q2C WHY NO HLTH INS-NOT NEED/WANT-W4					
+						
+			Freq.	Percent	Valid	Cum.
+Valid	0	No	923	18.05	18.05	18.05
+	1	Yes	157	3.07	3.07	21.12
+	7	Legitimate skip	4030	78.82	78.82	99.94
+	8	Don't know	3	0.06	0.06	100
+	Total		5113	100	100	
+						
+						
+						
+H4HS2D	S5Q2D WHY NO HLTH INS-DENIED INSUR-W4					
+						
+			Freq.	Percent	Valid	Cum.
+Valid	0	No	978	19.13	19.13	19.13
+	1	Yes	93	1.82	1.82	20.95
+	5	Not asked on pretest	10	0.2	0.2	21.14
+	7	Legitimate skip	4030	78.82	78.82	99.96
+	8	Don't know	2	0.04	0.04	100
+	Total		5113	100	100	
+						
+						
+(Uninsured Only)						
+H4HS2A	S5Q2A WHY NO HEALTH INS-NO OFFER-W4					
+						
+			Freq.	Percent	Valid	Cum.
+Valid	0	No	572	53	52.82	52.82
+	1	Yes	509	47	47	99.82
+	8	Don't Know	2	0	0.18	100
+	Total		1083	100	100	
+						
+						
+						
+H4HS2B	S5Q2B WHY NO HLTH INS-TOO EXPENSIVE-W4					
+						
+			Freq.	Percent	Valid	Cum.
+Valid	0	No	277	26	25.58	25.58
+	1	Yes	798	74	73.68	99.26
+	8	Don't know	8	1	0.74	100
+	Total		1083	100	100	
+						
+						
+						
+H4HS2C	S5Q2C WHY NO HLTH INS-NOT NEED/WANT-W4					
+						
+			Freq.	Percent	Valid	Cum.
+Valid	0	No	923	85	85.23	85.23
+	1	Yes	157	15	14.5	99.72
+	8	Don't know	3	0	0.28	100
+	Total		1083	100	100	
+						
+						
+						
+H4HS2D	S5Q2D WHY NO HLTH INS-DENIED INSUR-W4					
+						
+			Freq.	Percent	Valid	Cum.
+Valid	0	No	978	90	90.3	90.3
+	1	Yes	93	9	8.59	98.89
+	5	Not asked on pretest	10	1	0.92	99.82
+	8	Don't know	2	0	0.18	100
+	Total		1083	100	100	
