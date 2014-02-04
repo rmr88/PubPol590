@@ -7,7 +7,7 @@
 *.gph
 *.pdf
 *.pptx
-
+ICPSR_downloads/
 
 #################
 ## Eclipse
