@@ -12,10 +12,10 @@ For this project, I used the wave 4 public access data (DS0023), the wave 4 weig
 
 You can set up the main directory for this project anywhere on your computer. For best performance, you should have the following subdirectories in the main directory, spelled and capitalized exactly as shown. Folders within these subfolders are indented where applicable.
 
-*	DO Files
+*	DO_Files
 *	Descriptives
-*	R Files
-*	ICPSR downloads (subfolders: DS0001, DS0019, DS0023, DS0029)
+*	R_Files
+*	ICPSR_downloads (subfolders: DS0001, DS0019, DS0023, DS0029)
 
 ## DO Files
 
