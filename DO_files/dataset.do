@@ -3,8 +3,8 @@
 proselectdir
 //run dataset_raw.do
 use raw_data.dta, clear
-
-keep AID-PRISON4 H1GH39-H1GH46 H1RP* H1MO* H4HS* H4PE* H4OD* H4GH* H4ID* S4-S7 H4ED1-H4ED3A H4EC* GSWGT4 GSWGT4_2 GSWGT134
+drop if PRISON4 == 1 //drop current (wave 4) prisoners
+keep AID-PRISON4 H1GH39-H1GH46 H1RP* H1MO* H4HS* H4LM* H4PE* H4OD* H4GH* H4ID* S4-S7 H4ED1-H4ED3A H4EC* GSWGT4 GSWGT4_2 GSWGT134
 //what about parents' education? can only find W1 question on that...
 
 *Generate Age:
@@ -85,10 +85,13 @@ ren H4ID26 voice_prob_affect
 ren H4ED1 hs_grad
 ren H4ED2 education
 ren H4ED3A recent_degree
+//Labor
+ren H4LM11 employed
+ren H4LM14 unemp_status
 //Economics
 ren H4EC1 hh_income2006
-ren H4EC2 pers_income2006
-ren H4EC3 pers_income2006_guess
+ren H4EC2 p_income2006
+ren H4EC3 p_income2006_guess
 ren H4EC4 rent_own
 ren H4EC5 mortgage_owed
 ren H4EC6 mort_parents_help
@@ -106,47 +109,47 @@ ren H4EC17 hh_welfare_before18_how_much
 ren H4EC18 hh_welfare
 ren H4EC19 class_ladder
 //Personality Battery
-ren H4PE1 personality_life_of_party
-ren H4PE2 personality_sympathize
-ren H4PE3 personality_chores_right_away
-ren H4PE4 personality_mood_swings
-ren H4PE5 personality_vivd_imagination
-ren H4PE6 personality_worry
-ren H4PE7 personality_optimistic
-ren H4PE8 personality_angry_easily
-ren H4PE9 personality_dont_talk_much
-ren H4PE10 personality_disinterest
-ren H4PE11 personality_forget_return
-ren H4PE12 personality_relaxed
-ren H4PE13 personality_not_abstract
-ren H4PE14 personality_not_bothered
-ren H4PE15 personality_expect_not_my_way
-ren H4PE16 personality_rarely_irritated
-ren H4PE17 personality_socialize_freely
-ren H4PE18 personality_feel_others_emotions
-ren H4PE19 personality_like_order
-ren H4PE20 personality_upset_easily
-ren H4PE21 personality_abstract_hard
-ren H4PE22 personality_stressed_easily
-ren H4PE23 personality_expect_good
-ren H4PE24 personality_lose_temper
-ren H4PE25 personality_keep_in_background
-ren H4PE26 personality_no_interest_others
-ren H4PE27 personality_make_mess_of_things
-ren H4PE28 personality_seldom_blue
-ren H4PE29 personality_lack_imagination
-ren H4PE30 personality_no_worry_past
-ren H4PE31 personality_rarely_expect_good
-ren H4PE32 personality_keep_cool
-ren H4PE33 personality_avoid_problems
-ren H4PE34 personality_rely_on_gut
-ren H4PE35 personality_risky
-ren H4PE36 personality_no_thought_future
-ren H4PE37 personality_cant_change
-ren H4PE38 personality_others_set_limits
-ren H4PE39 personality_interference
-ren H4PE40 personality_low_control
-ren H4PE41 personality_problems_unsolvable
+ren H4PE1 pers_life_of_party
+ren H4PE2 pers_sympathize
+ren H4PE3 pers_chores_right_away
+ren H4PE4 pers_mood_swings
+ren H4PE5 pers_vivid_imagination
+ren H4PE6 pers_worry
+ren H4PE7 pers_optimistic
+ren H4PE8 pers_angry_easily
+ren H4PE9 pers_dont_talk_much
+ren H4PE10 pers_disinterest
+ren H4PE11 pers_forget_return
+ren H4PE12 pers_relaxed
+ren H4PE13 pers_not_abstract
+ren H4PE14 pers_not_bothered
+ren H4PE15 pers_expect_not_my_way
+ren H4PE16 pers_rarely_irritated
+ren H4PE17 pers_socialize_freely
+ren H4PE18 pers_feel_others_emotions
+ren H4PE19 pers_like_order
+ren H4PE20 pers_upset_easily
+ren H4PE21 pers_abstract_hard
+ren H4PE22 pers_stressed_easily
+ren H4PE23 pers_expect_good
+ren H4PE24 pers_lose_temper
+ren H4PE25 pers_keep_background
+ren H4PE26 pers_no_interest_others
+ren H4PE27 pers_make_mess_of_things
+ren H4PE28 pers_seldom_blue
+ren H4PE29 pers_lack_imagination
+ren H4PE30 pers_no_worry_past
+ren H4PE31 pers_rarely_expect_good
+ren H4PE32 pers_keep_cool
+ren H4PE33 pers_avoid_problems
+ren H4PE34 pers_rely_on_gut
+ren H4PE35 pers_risky
+ren H4PE36 pers_no_thought_future
+ren H4PE37 pers_cant_change
+ren H4PE38 pers_others_set_limits
+ren H4PE39 pers_interference
+ren H4PE40 pers_low_control
+ren H4PE41 pers_problems_unsolvable
 //Wave 1 Behaviors
 ren H1GH39 helmet_bike
 ren H1GH40 motorcycle_ride_freq
@@ -192,11 +195,40 @@ ren GSWGT4 wt_longit
 ren GSWGT4_2 wt_cross
 ren GSWGT134 wt_longit_untrimmed
 
+//Recodes and Labels
+//Gender dummy
+recode gender (2=0), gen(male)
+label define MALE 0 "Female" 1 "Male"
+label values male MALE
+//Insured dummy
+recode insurance_status (1=0) (2/11 = 1), gen(insured)
+//Category variable for means comparisons
+recode insured (0 = 3) (1 = 1), gen(means_cat)
+replace means_cat = 2 if noins_dont_want == 1
+label define CATS 1 "Insured" 2 "Voluntary Uninsured" 3 "Non-voluntary Uninsured"
+label values means_cat CATS
+//Employment Categories
+gen empstat = unemp_stat + 1
+replace empstat = 1 if employed == 1
+label define EMPSTAT 1 "Employed" 2 "Only temporarily laid off" 3 "Maternity/ paternity leave" 4 "Sick leave/ temporarily disabled" ///
+	5 "Permanently disabled" 6 "Unemployed, looking for work" 7 "Unemployed, not looking" 8 "Student" 9 "Keeping house" 10 "Retired" ///
+	11 "Other"
+label values empstat EMPSTAT
+//Reverse codes for health and risk propensity
+revrs pers_risky gen_health
+ren pers_risky pers_risky_original
+ren gen_health gen_health_original
+ren revpers_risky pers_risky
+ren revgen_health gen_health
+
 //Sort Vars:
-order AID wt_* insurance_status noins_no_offer noins_expensive noins_dont_want noins_denied ins_num_mos12 personality_*, first
+order AID wt_* insurance_status noins_no_offer noins_expensive noins_dont_want noins_denied ins_num_mos12 pers_*, first
 order IMONTH4 IDAY4 IYEAR4 MACNO4 INTID4 VERSION4 BREAK_Q PRYEAR4 PRETEST4 PRISON4 H4*, last
-order age race_* hs_grad education recent_degree hh_income2006 pers_income2006 pers_income2006_guess rent_own hh_assets other_debts ///
+order age race_* hs_grad education recent_degree hh_income2006 p_income2006 p_income2006_guess rent_own hh_assets other_debts ///
 	net_value, after(gender)
+
+//Big 5 Factors:
+run DO_files\factors.do
 
 save clean_data.dta, replace
 
