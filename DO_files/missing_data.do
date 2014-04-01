@@ -63,6 +63,7 @@ replace H4GH13T = .d if (H4GH13T == 8)
 
 replace H4HS1 = .d if (H4HS1 == 98)
 replace H4HS2A = . if (H4HS2A == 7)
+replace H4HS2A = .d if (H4HS2A == 8)
 replace H4HS2B = . if (H4HS2B == 7)
 replace H4HS2B = .d if (H4HS2B == 8)
 replace H4HS2C = . if (H4HS2C == 7)
@@ -123,6 +124,11 @@ replace H4ED1 = .d if (H4ED1 == 8)
 replace H4ED2 = .d if (H4ED2 == 98)
 replace H4ED3A = . if (H4ED3A == 97)
 replace H4ED3A = .d if (H4ED3A == 98)
+
+replace H4LM11 = .r if H4LM11 == 6
+replace H4LM11 = . if H4LM11 == 7
+replace H4LM14 = .r if H4LM14 == 96
+replace H4LM14 = . if H4LM14 == 97
 
 replace H4EC1 = .r if (H4EC1 == 96)
 replace H4EC1 = .d if (H4EC1 == 98)
@@ -275,7 +281,7 @@ foreach var of varlist H1RP* H1MO* {
 	replace `var' = .n if (`var' == 9)
 }
 
-replace S4 = .d if S4 == 98
+replace S4 = .d if S4 == 8
 replace S5 = . if S5 == 97 //be sure to keep track of the multiple response category (coded 99)
 replace S5 = .d if S5 == 98
 replace S7 = . if S7 == 97 //be sure to keep track of the multiple response category (coded 99)

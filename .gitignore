@@ -8,6 +8,9 @@
 *.pdf
 *.pptx
 ICPSR_downloads/
+Drafts/
+Presentations/
+Lit_review/
 
 #################
 ## Eclipse
