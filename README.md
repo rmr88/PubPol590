@@ -33,7 +33,7 @@ This DO file merges the datasets downloaded from ICPSR into a single dataset. Th
 
 *Datasets directly affected: raw_data.dta*  
 
-*Run by: dataset_raw.do *  
+*Run by: dataset_raw.do*  
 
 This DO file changes missing values from numeric codes like 7 or 9997 to Stata's missing value codes (., .d, etc.). It is based on code from the supplemental DO files that come with ICPSR downloads 21600-0001 (for wave 1 questions) and 21600-0023 (for wave 4). To preserve information about the type of missingness, I use missing value codes as follows (this legend is also found in the DO file):
 
