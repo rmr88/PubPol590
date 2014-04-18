@@ -54,7 +54,7 @@ This creates the clean data file for analysis. It keeps only varibles that are r
 
 *Files created: impcomp1.xml, impcomp2.xml, and impcomp3.xml in imputations subfolder of Results folder*
 
-*Run by: models.do"
+*Run by: models.do*
 
 Some of the variables used in analysis had significant amounts of missing data. This DO file summarizes patterns of missingness for all variables used in the analysis and generates imputations for income. This DO file, if run on its own or with the "1" argument from another DO file (see below), generates regression output tables in "Results." These tables compare models using missing values of income, models using dummies for income categories (including the .d and .r categories), and models using imputations  for missing values of income. The mi impute command specifies a random number seed, so the imputations created will be the same every time this DO file is run. The imputations are not saved in clean_data.dta at any point in this project. 
 
@@ -64,13 +64,13 @@ This DO file can be run with 0 as an argument to suppress the comparison tables.
 
 ### descriptives.do
 
-*Files created: all tab_*.csv files in Descriptives, and supplemental_stats.csv and additive_index.csv in supplemental*
+*Files created: all tab_\*.csv files in Descriptives, and supplemental_stats.csv and additive_index.csv in supplemental*
 
 This DO file creates tables of descriptive statistics, including the summary tables found in the paper and a table of supplemental statistics that may be of interest. The tables are exported to CSV files, created directly by the DO file. This is done using the tabmatrix and mat2txt programs I wrote, described below. 
 
 ### factors.do
 
-*File created: 
+*File created: factors.csv in supplemental folder*
 
 This DO file performs confirmatory factor analysis on the Big Five personality measures. The purpose is to confirm that adiditve indices are appropriate for use in the model.
 
@@ -114,15 +114,15 @@ The makefile for this project keeps track of changes to code used to generate al
 
 To run all the code in this project, you will need the following software packages:
 
-*	[Stata 13]{http://www.stata.com/} or higher
-*	Latest version of [R]{http://www.r-project.org/}
-*	Latest version of GNU Make ([Windows]{http://gnuwin32.sourceforge.net/packages/make.htm}; Mac users should already have this since it's usually a standard Mac OS feature).
+*	[Stata 13](http://www.stata.com/) or higher
+*	Latest version of [R](http://www.r-project.org/)
+*	Latest version of GNU Make ([Windows](http://gnuwin32.sourceforge.net/packages/make.htm); Mac users should already have this since it's usually a standard Mac OS feature).
 
 Prior to running the Makefile or any of the DO files, you should install the required Stata packages by running required_packages.do (in the Code folder). You should also install the required R libraries by running required_libraries.R (also in Code).
 
-You may need to add Stata, R, and Make to your system environment's path variable. Tutorial on how to do that in Windows [here]{http://www.computerhope.com/issues/ch000549.htm}.
+You may need to add Stata, R, and Make to your system environment's path variable. Tutorial on how to do that in Windows [here](http://www.computerhope.com/issues/ch000549.htm).
 
-I also recommend having Microsoft Office (though Open Office or Corel software will probably work as well), a good text editor(like [Notepad++]{http://notepad-plus-plus.org/} or [Sublime Text]{http://www.sublimetext.com/}), and [R Studio]{https://www.rstudio.com/}.
+I also recommend having Microsoft Office (though Open Office or Corel software will probably work as well), a good text editor(like [Notepad++](http://notepad-plus-plus.org/) or [Sublime Text](http://www.sublimetext.com/)), and [R Studio](https://www.rstudio.com/).
 
 ## To do:
 
