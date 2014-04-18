@@ -281,8 +281,15 @@ foreach var of varlist H1RP* H1MO* {
 	replace `var' = .n if (`var' == 9)
 }
 
-replace S4 = .d if S4 == 8
-replace S5 = . if S5 == 97 //be sure to keep track of the multiple response category (coded 99)
-replace S5 = .d if S5 == 98
-replace S7 = . if S7 == 97 //be sure to keep track of the multiple response category (coded 99)
-
+replace H1GI4 = .r if H1GI4 == 6
+replace H1GI4 = .d if H1GI4 == 8
+replace H1GI6A = .r if H1GI6A == 6
+replace H1GI6A = .d if H1GI6A == 8
+replace H1GI6B = .r if H1GI6B == 6
+replace H1GI6B = .d if H1GI6B == 8
+replace H1GI6C = .r if H1GI6C == 6
+replace H1GI6C = .d if H1GI6C == 8
+replace H1GI6D = .r if H1GI6D == 6
+replace H1GI6D = .d if H1GI6D == 8
+replace H1GI6E = .r if H1GI6E == 6
+replace H1GI6E = .d if H1GI6E == 8

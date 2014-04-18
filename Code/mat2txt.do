@@ -1,7 +1,8 @@
 *! 1.1.2 Ben Jann 24 Nov 2004
 *! 1.1.1 M Blasnik 18 Feb 2004
-*Modified by Robbie Richards, 10/2012
-cap program define mat2txt
+*Modified by Robbie Richards, 4/2014
+cap program drop mat2txt
+program define mat2txt
 	version 8.2
 	syntax , Matrix(name) SAVing(str) Rows(numlist max=1 >0 integer) Cols(numlist max=1 >0 integer) [ REPlace APPend Title(str) Format(str) NOTe(str) ]
 	if "`format'"=="" local format "%10.0g"
@@ -15,39 +16,39 @@ cap program define mat2txt
 	QuotedFullnames `matrix' row
 	QuotedFullnames `matrix' col
 	local countcols = 0
-	file write `myfile' "Title,Notes,Cluster Labels,Bar Labels,%" _n //header column
-	forvalues c=1/`ncols' {
-		if (`c' == 1) file write `myfile' `"`title',`note',"' //title and note on first row of first two columns
-		else file write `myfile' `",,"'
-
-		local colname: word `c' of `colnames'
-		file write `myfile' `"`colname',"' //row labels
-		
+	if "`title'" != "" file write `myfile' `"`title'"' _n //title, if specified by user
+	
+	//column headers:
+	if "`replace'" != "" {
+		file write `myfile' "Variable," 
+		forvalues c = 1/`ncols' {
+			local colname: word `c' of `colnames'
+			file write `myfile' `"`colname',"'
+		}
+		file write `myfile' _n
+	}
+	
+	//values:
+	forvalues r=1/`nrows' {
+		local rowname: word `r' of `rownames'
+		if `r' <= `formatn' local fmt: word `r' of `format'
 		local countrows = 0
-		forvalues r = 1/`nrows' { //label, value for the current row, col
-			local rowname: word `r' of `rownames'
-			if `r' <= `formatn' local fmt: word `r' of `format'
-			if (`r' != 1) file write `myfile' ",,,"
-			file write `myfile' `"`rowname',"' `fmt' (`matrix'[`r',`c']) "," _n //do we want the % sign, or not?
+		file write `myfile' `"`rowname',"' //row label
+		
+		forvalues c = 1/`ncols' { //column values for the current row
+			file write `myfile' `fmt' (`matrix'[`r',`c']) ","
 			local ++countcols
 			local ++countrows
 		}
-		while (`countrows' < `rows') {
-			file write `myfile' ",,,(no data yet),0" _n
-			local ++countcols
-			local ++countrows
-		}
+		file write `myfile' _n
 	}
-	while (`countcols' < (`rows' * `cols')) {
-		if (0 == mod(`countcols', `cols')) file write `myfile' ",,(no data yet),(no data yet),0" _n
-		else file write `myfile' ",,,(no data yet),0" _n
-		local ++countcols
-	}
-	file write `myfile' _n
+	
+	if "`note'" != "" file write `myfile' `"`note'"' _n //note, if specified by user
 	file close `myfile'
 end
 
-cap program define QuotedFullnames
+capture {
+program define QuotedFullnames
 	args matrix type
 	tempname extract
 	local one 1
@@ -66,3 +67,4 @@ cap program define QuotedFullnames
 	}
 	c_local `type'names `"`names'"'
 end
+}
