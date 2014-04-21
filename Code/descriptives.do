@@ -70,8 +70,6 @@ mat2txt, matrix(stats) saving(Descriptives\tab_demog.csv) rows(20) cols(12) repl
 
 *Additive Objective Health Index
 egen health_index = rowtotal(diag_* lastm_gum_disease-lastm_allergies last2w_flu-last2w_rash)
-sum health_index
-pwcorr health_index gen_health, sig
 tabstat health_index, by(insur_cat) statistics(mean sd n) save
 matrix define stats = r(Stat1)' , r(Stat2)' , r(Stat3)' , r(StatTotal)'
 matrix colnames stats = "Insured mean" sd N "Voluntarily uninsured mean" sd N "Non-voluntarily uninsured mean" sd N "Overall mean" sd N

@@ -70,8 +70,6 @@ This DO file creates tables of descriptive statistics, including the summary tab
 
 ### factors.do
 
-*File created: factors.csv in supplemental folder*
-
 This DO file performs confirmatory factor analysis on the Big Five personality measures. The purpose is to confirm that adiditve indices are appropriate for use in the model.
 
 ### models.do
@@ -102,10 +100,6 @@ The program contained in this DO file writes a Stata matrix to a CSV file, inclu
 
 The .R files in the Code folder contain R code to generate final versions of figures and graphs. These R code files can be run on their own, as long as the data files are in the proper locations.
 
-### Visual Basic Script for Tables
-
-To provide consistent formatting for tables, I provide a VBA script that formats the XML tables exported from Stata. This script only deletes irrelevant data and makes formatting changes.
-
 ## Makefile
 
 The makefile for this project keeps track of changes to code used to generate all datasets, tables, and graphics. Use the makefile to automatically (re)generate datasets and output files that need to be changed based on changes to earlier dependencies. Changes to tabmatrix.do, mat2txt.do, and proselectdir.ado files are not tracked.
@@ -128,7 +122,8 @@ I also recommend having Microsoft Office (though Open Office or Corel software w
 
 *	write page_stats code
 	*	add page_stats table, put in descriptives, add to makefile
-*	finish factors.do, add factor output table, put in supplemental, and add to makefile
-*	VBA script for formatting outreg tables?
 *	be sure makefile is completely up to date
 *	this would be a good time to figure out how to do better reference lists with TeX...
+*	Models with related variables on impulsivity
+*	Models with wave 1 or wave 3 risk measures to show that this is not just due to measurement error
+*	Long term (probably after the semester ends): get full dataset from Add Health

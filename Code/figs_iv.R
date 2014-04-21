@@ -1,5 +1,7 @@
 ### Main IV Graphs ###
 
+setwd("~/PubPol590")
+
 #Libraries
 library(ggplot2)
 library(dplyr, warn.conflicts=FALSE)
@@ -10,7 +12,6 @@ library(scales)
 library(reshape2)
 
 #Themes and Other Common Aesthetics
-
 bar.theme <- theme_bw() + theme(panel.grid.major.y=element_blank(), 
 	panel.grid.major.x=element_line(color="gray80"),
 	panel.border=element_blank(),
@@ -33,11 +34,11 @@ bar.theme.vert <- theme_bw() + theme(panel.grid.major.x=element_blank(),
 	plot.title=element_text(vjust=1.05),
 	plot.margin=unit(c(0.5,0,0,0.8), "lines"),
 	legend.position="none")
-limits <- aes(ymax=mean+se, ymin=mean-se, width=0.25)
+lim <- aes(ymax=mean+se, ymin=mean-se, width=0.25)
 scale <- scale_fill_manual(name="Insurance Status:",
 	values=c("Insured"="dodgerblue1",
 		"Voluntary Uninsured"="firebrick1",
-		"Non-voluntary Uninsured"="green4"))
+		"Non-voluntary Uninsured"="green4"), limits=c(2,4))
 dodge <- position_dodge(width=0.9)
 
 #Figure 3: Risk Propensity
@@ -58,10 +59,11 @@ risky <- as.data.frame(cbind(risky,
 	se=risky$sd / sqrt(risky$N)))
 
 p <- ggplot(risky, aes(x=cat, y=mean, fill=cat))
-risky_fig <- p + geom_bar(stat="identity") + geom_errorbar(limits) +
+risky_fig <- p + geom_bar(stat="identity") + geom_errorbar(lim) +
   labs(y="Mean Risk Propensity (Range is 1-5)",
 	  title="Risk Propensity by Insurance Status") +
-  coord_cartesian(ylim= c(2,4)) + bar.theme.vert + scale
+  bar.theme + scale  + scale_y_continuous(limits=c(2,4), oob=rescale_none) +
+	coord_flip()
 ggsave(risky_fig, filename="Descriptives\\fig3_risky.png",
 	width=8, height=5, units="in")
 
@@ -83,10 +85,11 @@ health <- as.data.frame(cbind(health,
 	se=health$sd / sqrt(health$N)))
 
 p <- ggplot(health, aes(x=cat, y=mean, fill=cat))
-health_fig <- p + geom_bar(stat="identity") + geom_errorbar(limits) +
+health_fig <- p + geom_bar(stat="identity") + geom_errorbar(lim) +
 	labs(y="Mean Health (Range is 1-5)",
 		title="Subjective General Health by Insurance Status") +
-	coord_cartesian(ylim= c(2,4)) + bar.theme.vert + scale
+	bar.theme + scale + scale_y_continuous(limits=c(2,4), oob=rescale_none) +
+	coord_flip()
 ggsave(health_fig, filename="Descriptives\\fig4_health.png",
 	width=8, height=5, units="in")
 
@@ -128,7 +131,7 @@ income$inc.level <- factor(income$inc.level,
 
 p <- ggplot(income, aes(x=inc.level, y=mean, fill=cat))
 income_fig <- p + geom_bar(stat="identity", position=dodge) + 
-	geom_errorbar(limits, position=dodge) +
+	geom_errorbar(lim, position=dodge) +
 	labs(x="Annual Household Income, 2006", title="Income by Insurance Status") +
 	bar.theme.vert + scale_fill_manual(name="Insurance Status:",
 		values=c("Insured    "="dodgerblue1",

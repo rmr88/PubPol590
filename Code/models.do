@@ -6,6 +6,7 @@ proselectdir
 use clean_data.dta, clear
 run Code\imputations.do 0 //the 0 argument suppresses the model comparisons run in this DO file. To run those, run the entire DO file
 
+
 *** Binary Logit Models ***
 
 *DV = Insured
@@ -42,10 +43,9 @@ logit noins_dont_want pers_risky gen_health injury_past12 i.empstat rent_own i.e
 local aic = (2*e(rank)) - (2*e(ll))
 outreg2 using "Results\table2.xml", append 2aster eform e(r2_p) addstat(AIC, `aic')
 
-logit noins_dont_want pers_risky gen_health injury_past12 i.empstat rent_own i.education male add_* hh_income2006 race_hispanic noins_no_offer ///
-	noins_expensive noins_denied
-local aic = (2*e(rank)) - (2*e(ll))
-outreg2 using "Results\table2.xml", append 2aster eform e(r2_p) addstat(AIC, `aic')
+mi estimate, post: logit noins_dont_want pers_risky gen_health injury_past12 i.empstat rent_own i.education male add_* hh_income_copy ///
+	race_hispanic noins_no_offer noins_expensive noins_denied
+outreg2 using "Results\table2.xml", append 2aster eform
 
 
 *** Multinomial Logit Models ***
@@ -59,7 +59,7 @@ mlogit insur_cat pers_risky gen_health injury_past12
 local aic = (2*e(rank)) - (2*e(ll))
 outreg2 using "Results\table3.xml", append 2aster eform e(r2_p) addstat(AIC, `aic')
 
-mlogit insur_cat pers_risky gen_health injury_past12 rent_own i.education male add_* i.empstat //all riskiness coeffs different from each other
+mlogit insur_cat pers_risky gen_health injury_past12 rent_own i.education male add_* i.empstat
 local aic = (2*e(rank)) - (2*e(ll))
 outreg2 using "Results\table3.xml", append 2aster eform e(r2_p) addstat(AIC, `aic')
 

@@ -1,6 +1,8 @@
 ### Conditional Probability Graphs ###
 
-setwd("~/PubPol590")
+#setwd("~/PubPol590")
+
+#Libraries
 library(ggplot2)
 library(dplyr, warn.conflicts=FALSE)
 library(scales)
@@ -47,7 +49,8 @@ cond_fig <- p + geom_line(aes(y=insur3p1, linetype="Mean Estimate",
 			"Poor Health"="dotted",
 			"Excellent Health"="longdash")) +
 	scale_y_continuous(labels=percent) +
-	labs(x="Riskiness (\"I like to take risks\")", y="Probability",
+	labs(x="Riskiness (\"I like to take risks\")",
+		y="Probability of Insurance Status",
 		title="Conditional Probabilities from Model") +
 	scale_x_discrete(breaks=1:5, labels=c("Strongly Disagree", "Disagree", 
 		"Neither", "Agree", "Strongly Agree")) + prob.theme
@@ -55,17 +58,17 @@ ggsave(cond_fig, filename="Results\\fig6_model.png",
 	width=8, height=5, units="in")
 
 #Voluntary Uninsured Only
-cond_fig_d <- p + geom_line(aes(y=insur3p2, linetype="Mean Estimate",
-	color="Vol. Uninsured"), size=1) +
-	geom_line(aes(y=ins3lp2, linetype="Poor Health",
-		color="Vol. Uninsured"), size=1) +
-	geom_line(aes(y=ins3hp2, linetype="Excellent Health",
-		color="Vol. Uninsured"), size=1) +
+cond_fig_d <- p + geom_line(aes(y=insur3p2, linetype="Mean Estimate"),
+		color="firebrick1", size=1) +
+	geom_line(aes(y=ins3lp2, linetype="Poor Health"), color="firebrick1", size=1) +
+	geom_line(aes(y=ins3hp2, linetype="Excellent Health"),
+		color="firebrick1", size=1) +
 	scale_linetype_manual(name="Health Status:",
 		values=c("Mean Estimate"="solid",
 			"Poor Health"="dotted",
 			"Excellent Health"="longdash")) +
-	labs(x="Riskiness (\"I like to take risks\")", y="Probability",
+	labs(x="Riskiness (\"I like to take risks\")",
+		y="Probability of Insurance Status",
 		title="Conditional Probabilities, Voluntarily Uninsured Only") +
 	scale_x_discrete(breaks=1:5, labels=c("Strongly Disagree", "Disagree", 
 		"Neither", "Agree", "Strongly Agree")) +

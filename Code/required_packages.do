@@ -12,3 +12,7 @@ ssc install misschk
 ssc install outreg2
 ssc install prvalue
 ssc install prgen
+
+*page_stats.do
+ssc install powerlog
+
