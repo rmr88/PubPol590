@@ -82,7 +82,7 @@ At the beginning of the DO file, Stata is told to execute imputations.do (with a
 
 ### page_stats.do
 
-*File created: page_stats.csv*
+*File created: page_stats.smcl in Descriptives folder*
 
 There are various statistics in the paper which are mentioned on their own and are not found in any descriptive or model tables. Most of these numbers come directly from my data. This DO file creates those statistics. Other numbers in the paper which come from other sources are cited appropriately.
 
@@ -120,9 +120,6 @@ I also recommend having Microsoft Office (though Open Office or Corel software w
 
 ## To do:
 
-*	write page_stats code
-	*	add page_stats table, put in descriptives, add to makefile
-*	be sure makefile is completely up to date
 *	this would be a good time to figure out how to do better reference lists with TeX...
 *	Models with related variables on impulsivity
 *	Models with wave 1 or wave 3 risk measures to show that this is not just due to measurement error
